@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+div{
+    display: block;
+}
+html{
+    height: 1560px;
+}
+body {
+    position: relative;
+    color: #000;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+.head {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    min-width: 1010px;
+    height: 90px;
+    background-color: #fff;
+}
+a{
+    display: block;
+    padding: 0 12px;
+    line-height: 90px;
+    height: 85px;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+}
+
+.mod_profile {
+    height: 315px;
+    padding-top: 120px;
+    background: url(https://y.qq.com/ryqq/static/media/bg_profile.bd497b5a.jpg?max_age=2592000) 50% no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.mod_profile, .mod_profile .section_inner {
+    height: 315px;
+}
+.profile_user {
+     position: relative;
+     width: 102px;
+     height: 102px;
+     margin: 0 auto;
+ }
+.profile_cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #fff;
+    border-radius: 99px;
+    background: #fff;
+}
+.profile_tit {
+    align-items: center;
+    margin-top: 30px;
+}
+.profile_name {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-right: 4px;
+}
+.main{
+    z-index: 2;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+}
+form{
+    padding-top:10px;
+}
+.profile_nav{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    margin-bottom: 0;
+    width: 80%;
+    height: 56px;
+    display: flex;
+    zoom: 1;
+    border-bottom: 1px solid #f7f7f7;
+    align-items: center;
+}
+.td {
+    margin: 40px 15px;
+}
+.td p{
+    position:absolute;
+    right:20px;
+    top:500px;
+}
+.td a{
+    display:inline-block;
+}
+table.table {
+    position: absolute;
+    top: 540px;
+}
+#thfirst,#tdfirst{
+    padding-left:15px;
+}
+th,td{
+    padding-left: 140px;
+}

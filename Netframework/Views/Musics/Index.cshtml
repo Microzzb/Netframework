@@ -1,0 +1,84 @@
+﻿@*model IEnumerable<Netframework.Models.Music>*@
+@model Netframework.ViewModels.MusicIndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    @Styles.Render("~/Content/User")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+<div class="app">
+    <div class="mod_profile">
+        <div class="section_inner">
+            <div class="profile_user">
+                <img src="../../wwwroot/images/user.jpg" alt=" " class="profile_cover">
+            </div>
+            <div class="profile_tit">
+                <h1>我的个人中心</h1>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="profile_nav">
+            <a class="like" href="#">The music I like</a>
+            <a class="like" href="#">The song list I created</a>
+            <a class="like" href="#">Focus</a>
+        </div>
+    </div>
+</div>
+
+<section class="td">
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+        @using (Html.BeginForm("Index", "Musics", FormMethod.Get))
+        {
+            <label>Filter by category:</label>
+            @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+            <input type="Submit" value="Filter" />
+            <input type="hidden" name="Search" id="Search" value="@Model.Search" />
+        }
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Musics.First().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Musics.First().Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Musics.First().Description)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Musics)
+        {
+            <tr>
+                <td id="tdfirst">
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    </table>
+</section>

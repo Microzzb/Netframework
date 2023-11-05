@@ -1,0 +1,98 @@
+﻿.head {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    min-width: 1010px;
+    height: 90px;
+    background-color: #fff;
+}
+
+    .head ul {
+        width: 1010px;
+        margin: 0 220px;
+        height: 100px;
+        line-height: 100px;
+    }
+
+        .head ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        .head ul .login {
+            float: right;
+            margin-left: 18px;
+        }
+
+        .head ul li a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #707070;
+        }
+
+            .head ul li a span {
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+                width: 4px;
+                background-color: #ee5044;
+                margin-right: 4px;
+                border-radius: 2px;
+                margin-bottom: -4px;
+            }
+
+            .head ul li a .logo {
+                height: 18px;
+            }
+
+            .head ul li a .logoo {
+                height: 28px;
+                vertical-align: -4px;
+            }
+
+            .head ul li a .logo-b {
+                margin-right: 15px;
+            }
+
+        .head ul .first {
+            margin-right: 108px;
+        }
+
+        .head ul .center a {
+            padding: 0 20px;
+        }
+
+
+        .head ul li a:hover {
+            color: #ff3300;
+        }
+
+        .head ul .spe a {
+            color: #ff3300;
+        }
+.btn-default {
+    display: inline-block;
+    position: absolute;
+    top: 35px;
+    right: 310px;
+}
+
+.form-group {
+    position: absolute;
+    top: 35px;
+    right: 360px;
+}
+/* 版权 */
+.footer {
+    position: absolute;
+    bottom: -70px;
+    left: 40px;
+    width: 1010px;
+    margin: 60px auto;
+}
+
+    .footer .our p {
+        margin-top: 8px;
+        font-size: 12px;
+        color: #AAA;
+    }

@@ -1,0 +1,154 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+ul, li {
+    list-style: none
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 85%;
+}
+
+body {
+    position: relative;
+    padding-top: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background: #f8f8f8;
+    min-height: 110vh;
+    position: relative;
+}
+
+.ban {
+    width: 1010px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin: 75px 0;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.classify {
+    text-align: center;
+    margin: 10px 0;
+}
+
+    .classify a {
+        margin: 0 8px;
+    }
+
+
+.classify-list {
+    display: flex;
+}
+
+
+.classify-item {
+    width: 17%;
+    height: 25%;
+    margin: 15px 15px;
+}
+
+    .classify-item img {
+        width: 100%;
+        height: 50%;
+    }
+
+.newMusic {
+    display: flex;
+    width: 100%;
+}
+
+.newMusic-item {
+    height: 15%;
+    margin: 15px 15px;
+}
+
+.newM-item {
+    width: 60%;
+    display: flex;
+}
+
+    .newM-item .newM-item-lg {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+.newM-item-con {
+    display: inline-block;
+    width: 500px;
+    margin-left: 15px;
+}
+
+    .newM-item-con div {
+        margin-top: 40px;
+    }
+
+    .newM-item-con .grey {
+        margin-top: 5px;
+        width: 200px;
+        color: grey;
+    }
+
+.newM-rg {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 175px;
+}
+
+.newM-right {
+    position: relative;
+    left: 65px;
+}
+
+.recommend.clearfix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recomment-item {
+    height: 280px;
+    width: 510px;
+}
+
+    .recomment-item img {
+        height: 95%;
+        width: 100%;
+    }
+
+.recomment-item1 {
+    height: 140px;
+}
+
+.classify-list.clearfix {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.classify-item1 {
+    width: 17%;
+    height: 25%;
+    margin: 15px 15px;
+}

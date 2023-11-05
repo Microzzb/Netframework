@@ -1,0 +1,109 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login an Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    @Styles.Render("~/Content/login")
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form novalidate>
+
+                <h1>Register</h1>
+                <div class="social-container">
+                    <a href="#" class="social">
+                        <i class="fa fa-qq"
+                           aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa fa-weixin"
+                           aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa fa-weibo"
+                           aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa fa-facebook"
+                           aria-hidden="true"></i>
+                    </a>
+                </div>
+                <span>Choose another way to register</span>
+                <label>
+                    <input type="text" placeholder="username" id="name" name="name" required>
+
+                    <input type="password" placeholder="password" id="pass" name="pass" required>
+
+                    <input type="email" placeholder="email" id="email" name="email" required>
+
+                    <button id="send_code">send code</button>
+
+                    <input type="email" placeholder="confirm code" required>
+                </label>
+                <button id="reg" name="reg">Register</button>
+
+            </form>
+        </div>
+        <!--- login form --->
+        <div class="form-container sign-in-container">
+            <form>
+                <h1>Login</h1>
+                <div class="social-container">
+                    <a href="#" class="social">
+                        <i class="fa fa-qq"
+                           aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa fa-weixin"
+                           aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa fa-weibo"
+                           aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fa fa-facebook"
+                           aria-hidden="true"></i>
+                    </a>
+                </div>
+                <span>Choose another way to sign in</span>
+                <label>
+                    <input type="text" placeholder="username" name="name">
+
+                    <input type="password" placeholder="password" name="pass">
+                </label>
+                <a href="#">Forgot password</a>
+                <input type="button" value="Login" onclick='location.href=("User.cshtml")' />
+
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-pannel overlay-left">
+                    <h1>Already have an account?</h1>
+                    <p>Please click below to go to login</p>
+                    <button class="ghost" id="signIn">Login</button>
+                </div>
+                <div class="overlay-pannel overlay-right">
+                    <h1>No account number?</h1>
+                    <p>Please click below to register</p>
+                    <button class="ghost" id="signUp">Register</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    @Scripts.Render("~/bundles/login")
+</body>
+
+</html>
+

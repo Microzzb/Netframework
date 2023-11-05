@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/header-footer")
+</head>
+<body>
+    <div class="head">
+        <ul>
+            <li class="first">
+                <a href="#">
+                    <span class="logo"></span>
+                    <span class="logoo"></span>
+                    <span class="logo logo-b"></span>
+                    遇见 FM
+                </a>
+            </li>
+            <li class="center spe">@Html.ActionLink("主页", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li class="center">@Html.ActionLink("我的音乐", "Music", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li>@Html.ActionLink("Shop by Category", "Index", "Categories")</li>
+            <li>@Html.ActionLink("View all our Musics", "Index", "Musics")</li>
+            <li>
+                @using (Html.BeginForm("Index", "Musics", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+                {
+                    <div class="form-group">
+                        @Html.TextBox("Search", null, new { @class = "form-control", @placeHolder = "Srearch Musics" })
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                }
+            </li>
+            <li class="login">@Html.ActionLink("登录", "Login", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+        </ul>
+        @using (Html.BeginForm("Index", "Musics", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+        {
+            <div class="form-group">
+                @Html.TextBox("Search", null, new { @class = "form-control", @placeHolder = "Srearch Musics" })
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        }
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <div class="our">
+            <p class="about">版权信息</p>
+            <p>© 2010-2023 Yuedu.fm All rights reserved   粤ICP备14076392号</p>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
