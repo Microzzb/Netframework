@@ -7,7 +7,7 @@ div{
     display: block;
 }
 html{
-    height: 1560px;
+    height: 1300px;
 }
 body {
     position: relative;
@@ -109,8 +109,32 @@ table.table {
     top: 540px;
 }
 #thfirst,#tdfirst{
-    padding-left:15px;
+    padding-left:100px;
 }
 th,td{
-    padding-left: 140px;
+    padding-left: 100px;
+}
+.page {
+    position: absolute;
+    left: 40px;
+    bottom: 150px;
+    font-size: 20px;
+}
+.page li {
+    list-style-type: none;
+    }
+.page a {
+        line-height: 45px;
+        height: 45px;
+        width: 15px;
+        background-color: rgba(0,0,0,0.4);
+        border-radius: 5px;
+    }
+ul.pagination {
+    display: flex;
+}
+p.mail a {
+    font-size: 15px;
+    display: inline-block;
+    line-height: 20px;
 }

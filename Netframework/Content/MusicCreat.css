@@ -1,0 +1,21 @@
+﻿.form-horizontal {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+}
+hr {
+    width: 1000px;
+}
+.creatform-group {
+    margin: 20px 0;
+}
+select#CategoryID {
+    width: 160px;
+}
+.col-md-10 {
+    margin-top: 10px;
+}
+a{
+    text-decoration:none;
+    color:black;
+}

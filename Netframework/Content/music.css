@@ -15,6 +15,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 .main{
     position: relative;
     height: 80%;
@@ -205,6 +206,22 @@ button#loop i {
     background: inherit;
     border-radius: 30px;
 }
+.right #home {
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: inherit;
+    border-radius: 30px;
+}
+#home a {
+    display: block;
+    text-decoration: none;
+}
 .right .show_song_no{
     position: absolute;
     top: 10px;
@@ -221,4 +238,14 @@ button#loop i {
 }
 .right .show_song_no p:nth-child(2){
     margin: 0 5px;
+}
+.validator {
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+}
+.validator a {
+        font-size: 15px;
+        text-decoration:none;
+        color:black;
 }

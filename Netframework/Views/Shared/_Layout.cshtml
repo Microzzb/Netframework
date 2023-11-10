@@ -15,10 +15,10 @@
                     遇见 FM
                 </a>
             </li>
-            <li class="center spe">@Html.ActionLink("主页", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-            <li class="center">@Html.ActionLink("我的音乐", "Music", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-            <li>@Html.ActionLink("Shop by Category", "Index", "Categories")</li>
-            <li>@Html.ActionLink("View all our Musics", "Index", "Musics")</li>
+            <li class="center spe">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li class="center">@Html.ActionLink("My Music", "Music", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li>@Html.ActionLink("Collect by Category", "Index", "Categories", new { area = "" }, new { @class = "nav-link" })</li>
+            <li>@Html.ActionLink("View all Musics", "Index", "Musics", new { area = "" }, new { @class = "nav-link" })</li>
             <li>
                 @using (Html.BeginForm("Index", "Musics", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
                 {
@@ -28,7 +28,7 @@
                     <button type="submit" class="btn btn-default">Submit</button>
                 }
             </li>
-            <li class="login">@Html.ActionLink("登录", "Login", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+            <li class="login">@Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "nav-link" })</li>
         </ul>
         @using (Html.BeginForm("Index", "Musics", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
         {
@@ -43,8 +43,8 @@
     </div>
     <div class="footer">
         <div class="our">
-            <p class="about">版权信息</p>
-            <p>© 2010-2023 Yuedu.fm All rights reserved   粤ICP备14076392号</p>
+            <p class="about">Contact us:</p>
+            <p class="mail"><a href="mailto:2623763698@qq.com">2623763698@qq.com</a></p>
         </div>
     </div>
     @Scripts.Render("~/bundles/jquery")

@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using Netframework.Data;
 using Netframework.Models;
 using Netframework.ViewModels;
+using PagedList;
 
 namespace Netframework.Controllers
 {
@@ -17,7 +18,7 @@ namespace Netframework.Controllers
         private NetframeworkContext db = new NetframeworkContext();
 
         // GET: Musics
-        public ActionResult Index(string category, string search)
+        public ActionResult Index(string category, string search, int? page, string sortBy)
         {
             MusicIndexViewModel viewModel = new MusicIndexViewModel();
             var musics = db.Musics.Include(m => m.Category);
@@ -31,7 +32,7 @@ namespace Netframework.Controllers
                 musics = musics.Where(m => m.Name.Contains(search) ||
                 m.Description.Contains(search) ||
                 m.Category.Name.Contains(search));
-            //    ViewBag.Search = search;
+            
                 viewModel.Search = search;
             }
             viewModel.CatsWithCount = from matchingMusics in musics
@@ -44,16 +45,34 @@ namespace Netframework.Controllers
                                           MusicCount = catGroup.Count()
                                       };
 
-            //var categories = musics.OrderBy(m => m.Category.Name).Select(m => m.Category.Name).Distinct();
-
             if (!String.IsNullOrEmpty(category))
             {
                 musics = musics.Where(m => m.Category.Name == category);
+                viewModel.Category = category;
             }
-
-           // ViewBag.Category = new SelectList(categories);
-           // return View(musics.ToList());
-            viewModel.Musics = musics;
+            
+            switch (sortBy)
+            {
+                case "price_lowest":
+                    musics = musics.OrderBy(m =>m.Price);
+                    break;
+                case "price_highest":
+                    musics = musics.OrderByDescending(m => m.Price);
+                    break;
+                default:
+                    musics = musics.OrderBy(m => m.Name);
+                    break;
+                    
+            }
+            const int PageItems = 3;
+            int currentPage = (page ?? 1);
+            viewModel.Musics = musics.ToPagedList(currentPage, PageItems);
+            viewModel.SortBy = sortBy;
+            viewModel.Sorts = new Dictionary<string, string>
+            {
+                { "Price low to high", "price_lowest"},
+                { "Price high to low", "price_highest"}
+            };
             return View(viewModel);
         }
 

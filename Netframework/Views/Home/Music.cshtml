@@ -28,6 +28,7 @@
 
         <!--- right part --->
         <div class="right">
+            <button id="home"><i class="fa fa-home" aria-hidden="true">@Html.ActionLink("home", "Index", "Musics")</i></button>
             <button id="day-night"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
             <div class="show_song_no">
                 <p id="present">1</p>
@@ -65,6 +66,10 @@
             <button id="loop">Single Loop<i class="fa fa-repeat aria-hidden=true"></i></button>
         </div>
 
+    </div>
+    <div class="validator">
+        <a href="https://validator.w3.org/nu/?doc=http://localhost:52744/Home/Music">Verify HTML5</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://localhost:52744/Content/music.css">Verify CSS3</a>
     </div>
     @Scripts.Render("~/bundles/music")
 </body>

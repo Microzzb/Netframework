@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Home/Index" title="Home"  description="Home page of the website">
+		<siteMapNode url="~/Home/Music" title="My Music"  description="Music page of the website" />
+		<siteMapNode url="~/Categories/Index" title="Collect by Category"  description="Category page of the website" />
+		<siteMapNode url="~/Musics/Index" title="View all Musics"  description="Music list page of the website" />
+		<siteMapNode url="~/Home/Login" title="Login"  description="Login page of the website" />
+	</siteMapNode>
+</siteMap>

@@ -1,13 +1,12 @@
 ﻿
 @{
-    Layout = null;
+    ViewBag.Title = "Login an Register";
 }
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login an Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     @Styles.Render("~/Content/login")
 </head>
@@ -80,8 +79,7 @@
                     <input type="password" placeholder="password" name="pass">
                 </label>
                 <a href="#">Forgot password</a>
-                <input type="button" value="Login" onclick='location.href=("User.cshtml")' />
-
+                <button class="login">@Html.ActionLink("Login", "Index", "Musics")</button>
             </form>
         </div>
 
@@ -101,6 +99,10 @@
         </div>
 
 
+    </div>
+    <div class="validator">
+        <a href="https://validator.w3.org/nu/?doc=http://localhost:52744/Home/Login">Verify HTML5</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://localhost:52744/Home/Login">Verify CSS3</a>
     </div>
     @Scripts.Render("~/bundles/login")
 </body>

@@ -1,0 +1,16 @@
+﻿tbody {
+    position: absolute;
+    left: 490px;
+    top: 260px;
+}
+td {
+    padding: 10px 42px;
+}
+td a {
+    padding: 10px 15px;
+}
+p.creat {
+    position: absolute;
+    top: 210px;
+    right: 150px;
+}

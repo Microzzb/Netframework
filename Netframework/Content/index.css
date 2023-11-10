@@ -10,7 +10,9 @@
     display: block;
     clear: both;
 }
-
+.head ul li {
+    margin-left: 15px;
+}
 ul, li {
     list-style: none
 }
@@ -22,7 +24,7 @@ a {
 
 img {
     width: 100%;
-    height: 85%;
+    height: 100%;
 }
 
 body {
@@ -33,7 +35,6 @@ body {
     color: #333;
     background: #f8f8f8;
     min-height: 110vh;
-    position: relative;
 }
 
 .ban {
@@ -69,10 +70,13 @@ body {
     margin: 15px 15px;
 }
 
-    .classify-item img {
-        width: 100%;
-        height: 50%;
-    }
+.classify-item img {
+    width: 100%;
+    height: 50%;
+}
+.classify-item-n {
+    margin: 5px 0;
+}
 
 .newMusic {
     display: flex;
@@ -89,10 +93,10 @@ body {
     display: flex;
 }
 
-    .newM-item .newM-item-lg {
-        width: 80%;
-        margin: 10px 0;
-    }
+.newM-item .newM-item-lg {
+    width: 80%;
+    margin: 10px 0;
+}
 
 .newM-item-con {
     display: inline-block;
@@ -133,10 +137,10 @@ body {
     width: 510px;
 }
 
-    .recomment-item img {
+.recomment-item img {
         height: 95%;
         width: 100%;
-    }
+}
 
 .recomment-item1 {
     height: 140px;

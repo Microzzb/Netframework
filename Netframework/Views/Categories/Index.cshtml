@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<Netframework.Models.Category>
 
 @{
-    Layout = null;
     ViewBag.Title = "Index";
 }
-
+@Styles.Render("~/Content/EditData")
 <h2>Index</h2>
 
-<p>
+<p class="creat">
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
@@ -18,17 +17,22 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink(item.Name, "Index", "Musics", new{Category =item.Name}, null)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Name, "Index", "Musics", new { Category = item.Name }, null)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>
+<div class="validator">
+    <a href="https://validator.w3.org/nu/?doc=http://localhost:52744/Categories/Index">VerifyHTML5</a>
+    <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://localhost:52744/Content/EditData.css">VerifyCSS3</a>
+</div>

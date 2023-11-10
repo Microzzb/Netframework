@@ -1,5 +1,7 @@
 ﻿@*model IEnumerable<Netframework.Models.Music>*@
 @model Netframework.ViewModels.MusicIndexViewModel
+@using PagedList.Mvc
+ 
 @{
     ViewBag.Title = "Index";
 }
@@ -16,7 +18,7 @@
                 <img src="../../wwwroot/images/user.jpg" alt=" " class="profile_cover">
             </div>
             <div class="profile_tit">
-                <h1>我的个人中心</h1>
+                <h1>My personal account</h1>
             </div>
         </div>
     </div>
@@ -30,13 +32,18 @@
 </div>
 
 <section class="td">
-
+    <p>
+        @(String.IsNullOrWhiteSpace (Model.Search)? "Showing all":"You search for" + Model.Search + " found")
+        @Model.Musics.TotalItemCount songs
+    </p>
     <p>
         @Html.ActionLink("Create New", "Create")
         @using (Html.BeginForm("Index", "Musics", FormMethod.Get))
         {
             <label>Filter by category:</label>
             @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+            <label>Sort by:</label>
+            @Html.DropDownListFor(vm => vm.SortBy, new SelectList(Model.Sorts, "Value", "Key"), "Default")
             <input type="Submit" value="Filter" />
             <input type="hidden" name="Search" id="Search" value="@Model.Search" />
         }
@@ -81,4 +88,12 @@
             </tr>
         }
     </table>
+    <div class="page">
+        Page @(Model.Musics.PageCount <Model.Musics.PageNumber ? 0 : Model.Musics.PageNumber) of @Model.Musics.PageCount
+        @Html.PagedListPager(Model.Musics, page => Url.Action("Index", new { category = Model.Category, Search = Model.Search, sortBy = Model.SortBy, page }))
+    </div>
+    <div class="validator">
+        <a href="https://validator.w3.org/nu/?doc=http://localhost:52744/Musics/Index">Verify HTML5</a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://localhost:52744/Content/user.css">Verify CSS3</a>
+    </div>
 </section>

@@ -4,15 +4,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace Netframework.ViewModels
 {
     public class MusicIndexViewModel
     {
-        public IQueryable<Music> Musics { get; set; }
+       // public IQueryable<Music> Musics { get; set; }
+
+        public IPagedList<Music> Musics { get; set; }
+
         public string Search { get; set; }
+
         public IEnumerable<CategoryWithCount> CatsWithCount { get; set; }
         public string Category { get; set; }
+        public string SortBy { get; internal set; }
+        public Dictionary<string, string> Sorts { get; set; }
         public IEnumerable<SelectListItem> CatFilterItems
         {
             get

@@ -115,6 +115,9 @@ button.ghost{
 button.ghost:hover{
     transform: scale(0.95,0.95);
 }
+.login a{
+    color:white;
+}
 .form-container{
     position: absolute;
     top: 0;
